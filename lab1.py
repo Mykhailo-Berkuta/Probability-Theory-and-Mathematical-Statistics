@@ -4,10 +4,13 @@
 from collections import Counter
 from decimal import Decimal, ROUND_HALF_UP
 
+import matplotlib
+
+matplotlib.use("Agg")  # графіки лише зберігаються у файли, без вікна (не потрібен Tk)
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 
-plt.rcParams["font.family"] = ["Times New Roman", "Liberation Serif", "DejaVu Serif"]
+plt.rcParams["font.family"] = ["Times New Roman", "DejaVu Serif"]
 plt.rcParams["mathtext.fontset"] = "stix"
 
 DATA_1 = [1, 1, 2, 2, 1, 2, 3, 2, 3, 2, 2, 4, 2, 4, 5, 2, 5, 4, 2, 6]
